@@ -16,7 +16,7 @@ gem "jquery-rails"
 # To use debugger
 # gem 'debugger'
 
-gem "sqlite3"
+gem "activerecord-jdbcsqlite3-adapter"
 gem "devise", "~> 2.2.3"
 
 gem "ember-source", github: "emberjs/ember.js"

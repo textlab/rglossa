@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'globalize3'
   s.add_dependency 'i18n-js'
 
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
   s.add_development_dependency 'rb-fsevent', '~> 0.9.1'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'factory_girl_rails'
