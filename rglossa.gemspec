@@ -29,6 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ember-rails', '~> 0.13.0'
   s.add_dependency 'globalize3'
   s.add_dependency 'i18n-js'
+  s.add_dependency 'neo4j'
 
   s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
   s.add_development_dependency 'rb-fsevent', '~> 0.9.1'

@@ -1,18 +1,18 @@
 require 'globalize3'
 
 module Rglossa
-  class Corpus < ActiveRecord::Base
-    attr_accessible :locale, :name, :short_name, :encoding
+  class Corpus < Neo4j::Rails::Model
+    property :locate, :name, :short_name, :encoding
 
     translates :name, fallbacks_for_empty_translations: true
 
     validates_presence_of :name
 
-    has_many :corpus_texts, dependent: :destroy
-    has_many :metadata_categories,
-             dependent: :destroy,
-             order: :short_name,
-             before_add: :set_metadata_value_type
+    has_n :corpus_texts, dependent: :destroy
+    has_n :metadata_categories,
+      dependent: :destroy,
+      order: :short_name,
+      before_add: :set_metadata_value_type
 
     store :config, accessors: [:languages], coder: JSON
 
