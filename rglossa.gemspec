@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails',   '~> 3.2.5'
   s.add_dependency 'coffee-rails', '~> 3.2.2'
   s.add_dependency 'uglifier',     '>= 1.2.7'
-  s.add_dependency 'oj'  # more efficient parsing and generation of JSON
   s.add_dependency 'turbo-sprockets-rails3'  # faster precompilation of assets
   s.add_dependency 'devise', '~> 2.2.3'
   s.add_dependency 'handlebars-source', "~> 1.0.12"

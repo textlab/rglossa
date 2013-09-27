@@ -16,7 +16,7 @@ gem "jquery-rails"
 # To use debugger
 # gem 'debugger'
 
-gem "mysql2"
+gem "sqlite3"
 gem "devise", "~> 2.2.3"
 
 gem "ember-source", github: "emberjs/ember.js"
