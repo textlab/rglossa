@@ -1,10 +1,7 @@
-require 'globalize3'
-
 module Rglossa
   class Corpus < Neo4j::Rails::Model
-    property :locate, :name, :short_name, :encoding
-
-    translates :name, fallbacks_for_empty_translations: true
+    property :locale, :name, :short_name, :encoding
+    property :config, type: :serialize
 
     validates_presence_of :name
 
@@ -13,8 +10,6 @@ module Rglossa
       dependent: :destroy,
       order: :short_name,
       before_add: :set_metadata_value_type
-
-    store :config, accessors: [:languages], coder: JSON
 
     def metadata_category_ids
       metadata_categories.pluck(:id)
